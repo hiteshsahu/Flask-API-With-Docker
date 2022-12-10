@@ -1,22 +1,26 @@
-# Flask-API  ⚗️
-## Python backend using Python Flask
+# Building Flask API with Docker ⚗️
+> ### Python backend using Python3 Flask With Docker
 
-## Setup
+----
 
+## **SETUP** ⚙️
 
     pip install Flask
 
-## Development   
+-----
+
+## **BUILD** 🏗️
 
 Debug Run
 
     flask --app flaskr --debug run
 
-## Deployment
+----
 
-1. Build Docker Container Image 
+## **DEPLOYMENT** 📦
 
-    
+Build Docker Container Image 
+ 
     docker build --tag python-docker .
 
 Validate Image is created
@@ -29,9 +33,7 @@ Result:
     REPOSITORY      TAG       IMAGE ID       CREATED          SIZE
     python-docker   latest    199cf8a5350c   4 minutes ago    145MB
 
-
-2. Run Container with flask
-    
+Run Container with flask
 
     docker run -d -p 5000:5000 python-docker
 
