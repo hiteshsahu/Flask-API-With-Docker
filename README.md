@@ -15,7 +15,15 @@ Debug Run
 
     flask --app flaskr --debug run
 
+
+Non debug run
+
+   flask --app flaskr --no-debugger
+
 ----
+
+App will start on http://127.0.0.1:5000
+
 
 ## **DEPLOYMENT** 📦
 
