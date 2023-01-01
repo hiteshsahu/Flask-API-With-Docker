@@ -1,22 +1,28 @@
+<html>
 <head>
-      <script type = "text/javascript"
-         src = "{{ url_for('static', filename = 'hello.js') }}" ></script>
-   </head>
+    <title>Home Page</title>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'hello.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+</head>
 
-   <body>
-    <h1>Home Page!</h1>
+<body>
+<h1>Home Page</h1>
 
-      {% if name %}
-  <h2>Hello {{ name }}!</h2>
-      <a href="./logout">Logout</a>
-      {% else %}
-  <h4>Login to see your profile!</h4>
-           <a href="./login"> Login</a>
-    {% endif %}
+{% if name %}
+<h3>Hello {{ name }}!</h3>
 
-      <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+<ul class="a">
+  <li><a href="./logout">Logout</a></li>
+  <li><a href="./blogs">Blogs</a></li>
+  <li><a href="./admin">Admin</a></li>
+</ul>
 
+{% else %}
+<h4>Login to see your profile!</h4>
+<a href="./login" class="login"> Login</a>
+{% endif %}
 
+<input type="button" onclick="sayHello()" value="Say Hello"/>
+</body>
+</html>
 
-
-   </body>

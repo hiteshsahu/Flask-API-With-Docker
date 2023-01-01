@@ -1,16 +1,18 @@
 <!doctype html>
 <html>
 <head>
-  <title>Hello from Flask</title>
+    <title>Hello from Flask</title>
+    <link href="{{ url_for('static', filename = 'styles.css') }}" rel="stylesheet">
 </head>
-   <body>
-   <h1>Profile Page!</h1>
+
+<body>
+<h1>Profile Page!</h1>
 {% if name %}
-  <h2>Welcome to {{ name }} Profile!</h2>
+<h2>Welcome to {{ name }} Profile!</h2>
 {% else %}
-  <h2>User name not found!</h2>
+<h2>User name not found!</h2>
 {% endif %}
 
-    <a href="/"> Home</a>
-   </body>
+<a href="/"> Home</a>
+</body>
 </html>
